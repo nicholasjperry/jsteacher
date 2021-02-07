@@ -25,8 +25,8 @@ class About extends Component {
 
                     <div>
                         <p>{dev.bio}</p>
-                        <p>{dev.link1}</p>
-                        <p>{dev.link2}</p>
+                        <a target="blank" href={dev.link1}><p>{dev.link1}</p></a>
+                        <a target="blank" href={dev.link1}><p>{dev.link2}</p></a>
                     </div>
                 </Col>
             );
