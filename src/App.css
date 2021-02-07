@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+}
+.full-page{
+  min-height:800px;
+  padding:120px;
+  vertical-align: center;
+}
+.navList{
+  position:fixed;
+  right: 0;
+  margin:40px;
+}
+.navList li{
+list-style-type:none;
+display:inline;
+cursor: pointer;
+}
+.page-Heading{
+  font-size:3em;
+}
