@@ -11,7 +11,9 @@ class NavBar extends Component {
                     <Row>
                         <Col className="float-right">
                             <ul className="navList">
-                                <Link to="home"><li> Home </li></Link>|<Link to="about"><li> About us </li></Link>|<Link to="problems"> <li> Try App </li></Link>
+                                <Link to="home"><li> Home </li></Link>|
+                                <Link to="about"><li> About us </li></Link>|
+                                <Link to="problems"> <li> Try App </li></Link>
                             </ul>
                         </Col>
                     </Row>
@@ -21,4 +23,4 @@ class NavBar extends Component {
     }
 }
 
-export default NavBar
+export default NavBar;
