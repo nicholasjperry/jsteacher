@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, animateScroll as scroll } from "react-scroll";
-import { Navbar, Container } from 'reactstrap';
+import { Navbar } from 'reactstrap';
 
 class MainNav extends Component {
     render() {
