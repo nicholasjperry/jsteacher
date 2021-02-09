@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-//import {Redirect } from 'react-router-dom';
 
 class Home extends Component {
     render() {
@@ -21,4 +20,4 @@ class Home extends Component {
     }
 }
 
-export default Home
+export default Home;

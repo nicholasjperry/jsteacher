@@ -1,26 +1,17 @@
 import React, { Component } from 'react';
 import { Link, animateScroll as scroll } from "react-scroll";
-import { Container, Row, Col } from 'reactstrap';
-//import {Redirect } from 'react-router-dom';
+import { Navbar, Container } from 'reactstrap';
 
-class NavBar extends Component {
+class MainNav extends Component {
     render() {
         return (
-            <React.Fragment>
-                <Container>
-                    <Row>
-                        <Col className="float-right">
-                            <ul className="navList">
-                                <Link to="home"><li> Home </li></Link>|
-                                <Link to="about"><li> About us </li></Link>|
-                                <Link to="problems"> <li> Try App </li></Link>
-                            </ul>
-                        </Col>
-                    </Row>
-                </Container>
-            </React.Fragment>
+            <Navbar color="success" sticky="top" className="float-right">
+                <Link href="#" to="home" className="text-light">Home |</Link>
+                <Link href="#" to="about" className="text-light"> About Us |</Link>
+                <Link href="#" to="problems" className="text-light"> Problems</Link>
+            </Navbar>
         );
     }
 }
 
-export default NavBar;
+export default MainNav;
