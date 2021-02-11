@@ -4,6 +4,7 @@ import About from './Components/AboutComponent';
 import Problems from './Components/ProblemsComponent';
 import NavBar from './Components/NavComponent';
 import './App.css';
+import { Navbar } from 'reactstrap';
 
 class App extends Component {
   render() {

@@ -1,9 +1,12 @@
 .App {
   text-align: center;
 }
+h2{
+  color:#528AAe;
+}
 .full-page{
-  min-height:800px;
-  padding:120px;
+  min-height:600px;
+  padding-top:120px;
   vertical-align: center;
   max-width:1200px;
 }
@@ -12,22 +15,102 @@
   width:100%;
   padding:40px;
   padding-right:15%;
-  margin:auto 0;
   text-align:right;
   height:80px;
   background-color:#ffffff;
+  
   max-width:1200px;
-  z-index:1;
+  z-index:9;
 }
 .navList li{
 list-style-type:none;
 display:inline;
 cursor: pointer;
+font-family:'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+font-weight:lighter;
+color:#545454;
 }
-.page-Heading{
-  font-size:3em;
+.navList li:hover{
+  color:#3f3f3f;
+}
+.app-button{
+  width:200px;
+  background-color:#91BAD6;
+  color:#ffffff;
+  font-weight:bold;
+  height:75px;
+  border-radius:20px;
+  font-size:14pt;
+  border:2px solid #ffffff;
+  margin-left:20px;
+  display:inline;
+}
+.Modal{
+  border-radius:200px;
+}
+.Modal-box{
+  height:260px;
+  padding-top:80px;
+  padding-left:50px;
+  display:inline-block;
+  text-align:center;
+  border-radius:40px;
+}
+.Modal-box p{
+  width:85%;
+  text-align:center;
 }
 
+.modal-button{
+  width:100px;
+  background-color:#91BAD6;
+  color:#ffffff;
+  font-weight:bold;
+  height:35px;
+  border-radius:10px;
+  font-size:12pt;
+  border:1px solid #ffffff;
+  margin-left:20px;
+
+  display:inline;
+}
+.page-Heading{
+  
+  font-family: 'Stalinist One', cursive;
+}
+@media only screen and (max-width: 800px) {
+  .page-Heading {
+    padding-top:90px;
+    text-align:center;
+    display:inline-block;
+    font-size:24pt;
+  }
+  .copy-text{
+    font-size:12pt;
+    line-height:20pt;
+    margin-top:80px;
+  }
+}
+@media only screen and (min-width: 801px) and (max-width:1200px){
+  .full-page{
+    min-height:750px;
+  }
+  .page-Heading {
+    padding-top:200px;
+    text-align:center;
+    display:inline-block;
+    font-size:40pt;
+  }
+}
+
+@media only screen and (min-width: 1201px){
+  .page-Heading {
+    padding-top:220px;;
+    text-align:center;
+    display:inline-block;
+    font-size:60pt;
+  }
+}
 
 /* Styles for the Text Editor */
 
@@ -112,4 +195,45 @@ td{
 }
 .problemTitle{
   cursor:pointer;
+}
+
+/* Styles for the prompts*/
+.exampleimage{
+  width:75%;
+  margin:20px;
+}
+.codeBox{
+  width:100%;
+  min-height:400px;
+  background-color:#404040;
+  color:green;
+  font-family:courier, arial, sans-serif;
+  font-size:1.5em;
+  font-weight:bold;
+  text-decoration:none;
+  padding:10px;
+}
+.textBox{
+  width:100%;
+  font-size:16pt;
+  border-radius:2px;
+  text-align:left;
+  line-height:30px;
+}
+.complete-box{
+  margin-top:10px;
+  margin-bottom:20px;
+  width:100%;
+  height:75px;
+  background-color:#000000;
+  color:green;
+  padding:10px;
+}
+
+.our-names{
+  color:#ffffff;
+  font-weight:bold;
+  font-size:24pt;
+  letter-spacing: 20px;
+  text-shadow: 2px 2px  2px  #000000;
 }

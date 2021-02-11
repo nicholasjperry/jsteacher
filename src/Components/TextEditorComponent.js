@@ -1,55 +1,39 @@
-import React, { useState, useEffect } from 'react';
-import Editor from './EditorComponent'
-import useLocalStorage from '../hooks/useLocalStorage'
-import { Container, Row, Col } from 'reactstrap';
 
-function TextEditor() {
-  const [html, setHtml] = useLocalStorage('html', '')
-  const [css, setCss] = useLocalStorage('css', '')
-  const [js, setJs] = useLocalStorage('js', '')
-  const [srcDoc, setSrcDoc] = useState('')
+import React, { Component } from 'react';
+import { Container, Row, Col, Button } from 'reactstrap';
+import { Tasks } from '../shared/Problems';
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setSrcDoc(`
-        <html>
-          <body>${html}</body>
-          <style>${css}</style>
-          <script>${js}</script>
-        </html>
-      `)
-    }, 250)
 
-    return () => clearTimeout(timeout)
-  }, [html, css, js])
+class TextEditor extends Component {
+  constructor(props) {
+    super(props);
+    this.showUser = this.showUser.bind(this);
+    this.state = {
+      TASKS: Tasks,
+      username: ''
+    };
+  }
 
-  return (
-    <>
-      <Container className="full-page">
-        <Row>
-          <Col xs={12} sm={12} md={6} className="pane left-pane">
+  handleChange = event => {
+    this.setState({ username: event.target.value });
+  };
+  showUser() {
+    if (this.state.username.replace(/\s/g, "") === "badassbitch") {
+      alert('You passed!');
+    }
+    else {
+      alert
+        ('You failed!!');
+    }
+  }
 
-            <Editor
-              language="javascript"
-              displayName="JS"
-              value={js}
-              onChange={setJs}
-            />
-          </Col>
-          <Col xs={12} sm={12} md={5} className="pane right-pane">
-            <iframe
-              srcDoc={srcDoc}
-              title="output"
-              sandbox="allow-scripts"
-              frameBorder="0"
-              width="100%"
-              height="100%"
-            />
-          </Col>
-        </Row>
-      </Container>
-    </>
-  )
+  render() {
+    return (
+      <React.Fragment>
+      </React.Fragment>
+    );
+  }
 }
 
 export default TextEditor;
+
