@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Button } from 'reactstrap';
 import TextEditor from './TextEditorComponent';
 import { Tasks } from '../shared/Problems';
-// import {Redirect } from 'react-router-dom';
 
 class Problems extends Component {
     constructor(props) {
@@ -17,6 +16,8 @@ class Problems extends Component {
     }
 
     showProblems() {
+        document.querySelector('.problems-Landing').style.display="inline-block";
+        document.querySelector('.playground').style.display="none";
         document.querySelector('.problems-Landing').style.display= "none";
         document.querySelector('.problemsChoice').style.display="inline-block";
     }
@@ -29,18 +30,12 @@ class Problems extends Component {
         });
     }
     
-
-    quitBtn() {
-        document.querySelector('.problems-Landing').style.display="inline-block";
-        document.querySelector('.playground').style.display="none";
-    }
-    
     doneBtn() {
         alert('Clicking on this button will check the code.');
     }
 
     render() {
-        const eachProblem= this.state.tasks.map(task => {
+        const eachProblem=this.state.tasks.map(task => {
             return (
                 <tr>
                     <td  className="problemTitle" onClick={() => this.specificTask(task.id)}>
