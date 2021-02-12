@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 class Home extends Component {
     render() {
@@ -11,7 +12,12 @@ class Home extends Component {
                             <h2 className="page-Heading">
                                 BootcampLite
                         </h2>
-                            <p>Enhance your coding skills through a series of challenges!</p>
+                            <div className="copy-text">
+                                <p >BootcampLite is a simple, fun, and easy coding playground that allows the user
+                                to test and enhance their coding skills with a series of fun and dynamic problems.
+                            </p>
+                            </div>
+                            <Link to="problems"><button className="app-button">Let's Go!</button></Link>
                         </Col>
                     </Row>
                 </Container>

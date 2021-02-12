@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
 import { Link, animateScroll as scroll } from "react-scroll";
-import { Navbar, Container, Button } from 'reactstrap';
-import Problems from './ProblemsComponent';
+import { Container, Row, Col } from 'reactstrap';
 
 class NavBar extends Component {
     render() {
         return (
-            <Container>
-                <Navbar color="dark" fixed="top">
-                    <Link href="#" to="home" className="text-light">Home </Link>
-                    <Link href="#" to="about" className="text-light">About Us </Link>
-                    <Link href="#" to="problems">
-                        <Button className="text-light">Try App</Button>
-                    </Link>
-                </Navbar>
-            </Container>
+            <React.Fragment>
+                <Container >
+                    <Row>
+                        <Col className="float-right">
+                            <ul className="navList">
+                                <Link to="home"><li> Home </li></Link>|
+                                <Link to="about"><li> About us </li></Link>|
+                                <Link to="problems"> <li> The App </li></Link>
+                            </ul>
+                        </Col>
+                    </Row>
+                </Container>
+            </React.Fragment>
         );
     }
 }

@@ -19,14 +19,14 @@ class About extends Component {
                         <CardImg width="10%" src={dev.image} alt={dev.name} />
 
                         <CardImgOverlay>
-                            <CardTitle>{dev.name}</CardTitle>
+                            <CardTitle className="our-names">{dev.name}</CardTitle>
                         </CardImgOverlay>
                     </Card>
 
                     <div>
                         <p>{dev.bio}</p>
-                        <a target="blank" href={dev.link1}><p>{dev.link1}</p></a>
-                        <a target="blank" href={dev.link1}><p>{dev.link2}</p></a>
+                        <a target="blank" href={dev.link1}><p>Github</p></a>
+                        <a target="blank" href={dev.link2}><p>Linkedin</p></a>
                     </div>
                 </Col>
             );

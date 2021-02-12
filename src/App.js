@@ -5,7 +5,6 @@ import Problems from './Components/ProblemsComponent';
 import NavBar from './Components/NavComponent';
 import './App.css';
 
-
 class App extends Component {
   render() {
     return (
